@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>galih family.id</title>
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(0, 0, 0);
+      color: #000000;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    header nav a {
+      color: rgb(19, 1, 1);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+
+    .product {
+      background-color: rgb(254, 254, 254);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 250px;
+      min-width: 250px;
+      max-width: 250px;
+      height: 500px;
+      flex-shrink: 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .buy-button {
+      margin-top: 10px;
+      background-color: #0bff4c;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buy-button:hover {
+      background-color: #ffffff;
+    }
+
+    .deskripsi {
+      font-size: 0.9em;
+      line-height: 1.4;
+      overflow: auto;
+    }
+
+    #keranjang {
+      margin-top: 30px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #keranjang ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    #keranjang button {
+      margin-top: 10px;
+      background-color: #ff1900;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #kontak {
+      margin-top: 40px;
+      background: rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    #kontak i {
+      margin-right: 8px;
+      color: #000000;
+    }
+
+    #kontak a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    #kontak a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      padding: 10px;
+      background-color: #ececed;
+      color: rgb(3, 0, 0);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>galih family</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Produk</a></li>
+        <li><a href="#keranjang">Keranjang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  <main>
+    <section class="product">
+      <img src="https://i.imgur.com/GeNizKO.jpeg" alt="Produk 1" />
+      <h3>sepatu adidas hitam</h3>
+      <p><strong>Harga:</strong> Rp 599.000</p>
+      <p><strong>Bahan:</strong> kulit</p>
+      <p><strong>Ukuran:</strong>35,36,37</p>
+      <p class="deskripsi"><strong>Deskripsi:</strong> desain yang staylish dan modern.</p>
+      <button class="buy-button" onclick="tambahKeKeranjang('sepatu adidas', 100000)">Beli</button>
+    </section>
+
+    <section class="product">
+      <img src="https://i.imgur.com/oOM8i35.jpegg" alt="Produk 2" />
+      <h3>baju persib </h3>
+      <p><strong>Harga:</strong> Rp 450.000</p>
+      <p><strong>Bahan:</strong> jersey</p>
+      <p><strong>Ukuran:</strong> l,m,xl</p>
+      <p class="deskripsi"><strong>Deskripsi:</strong> memiliki ciri khas warna biru dan putih sebagai warna resmi klub. Jersey kandang (home) Persib umumnya berwarna biru dengan berbagai variasi desain, .</p>
+      <button class="buy-button" onclick="tambahKeKeranjang('jersey persib', 150000)">Beli</button>
+    </section>
+
+    <section class="product">
+      <img src="https://i.imgur.com/vGtfm7w.jpeg" alt="Produk 3" />
+      <h3>sepatu adidas biru </h3>
+      <p><strong>Harga:</strong> Rp 700.000</p>
+      <p><strong>Bahan:</strong> kulit</p>
+      <p><strong>Ukuran:</strong> 35-40</p>
+      <p class="deskripsi"><strong>Deskripsi:</strong> memiliki desain sporty dan modern dengan warna biru sebagai warna dominan,.</p>
+      <button class="buy-button" onclick="tambahKeKeranjang('sepatu biru adidas', 200000)">Beli</button>
+    </section>
+
+    <section class="product">
+      <img src="https://i.imgur.com/1NaMRSg.jpeg" alt="Produk 4" />
+      <h3>sepatu pink adidas</h3>
+      <p><strong>Harga:</strong> Rp 400.000</p>
+      <p><strong>Bahan:</strong>kulit</p>
+      <p><strong>Ukuran:</strong> 34,35,36</p>
+      <p class="deskripsi"><strong>Deskripsi:</strong> https://i.imgur.com/1NaMRSg.jpeg.,.</p>
+      <button class="buy-button" onclick="tambahKeKeranjang('sepatu pink', 250000)">Beli</button>
+    </section>
+  </main>
+
+
+  <section id="keranjang">
+    <h2>Keranjang Belanja</h2>
+    <ul id="daftar-keranjang"></ul>
+    <p><strong>Total:</strong> Rp <span id="total-harga">0</span></p>
+    <button onclick="kosongkanKeranjang()">Kosongkan Keranjang</button>
+  </section>
+
+
+  <section id="kontak">
+    <h2 style="margin-bottom: 15px;">Hubungi Kami</h2>
+    <p><i class="fas fa-envelope"></i><a href="mailto:galihmulana@email.com">galihmaulanad@email.com</a></p>
+    <p><i class="fab fa-whatsapp"></i><a href="https://wa.me/+6283825303562" target="_blank">6283825303562</a></p>
+    <p><i class="fab fa-instagram"></i><a href="https://instagram.com/glhmlna03" target="_blank">@glhmlna03.shop</a></p>
+    <p><i class="fas fa-map-marker-alt"></i> Jl. cigadung.234, Bandung</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Halaman E-commerce Man Mode.Id. All rights reserved.
+  </footer>
+
+  <!-- Script Keranjang -->
+  <script>
+    let keranjang = [];
+
+    function tambahKeKeranjang(nama, harga) {
+      keranjang.push({ nama, harga });
+      alert(nama + " ditambahkan ke keranjang!");
+      tampilkanKeranjang();
+    }
+
+    function tampilkanKeranjang() {
+      const daftar = document.getElementById('daftar-keranjang');
+      const total = document.getElementById('total-harga');
+      daftar.innerHTML = '';
+      let totalHarga = 0;
+
+      keranjang.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item.nama + " - Rp " + item.harga.toLocaleString('id-ID');
+        daftar.appendChild(li);
+        totalHarga += item.harga;
+      });
+
+      total.textContent = totalHarga.toLocaleString('id-ID');
+    }
+
+    function kosongkanKeranjang() {
+      keranjang = [];
+      tampilkanKeranjang();
+    }
+  </script>
+</body>
+</html>
